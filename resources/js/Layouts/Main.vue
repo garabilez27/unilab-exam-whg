@@ -119,8 +119,6 @@ export default {
         <section class="container-fluid py-2" id="breadcrumb">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <!-- <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Library</li> -->
                     <li v-for="bread in breadcrumb" class="breadcrumb-item" v-text="bread"></li>
                 </ol>
             </nav>

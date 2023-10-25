@@ -8,6 +8,10 @@ html, body, #app {
     height: 100%;
 }
 
+#myDataTable_filter {
+    display: none;
+}
+
 main {
     height: 100%;
     display: grid;
