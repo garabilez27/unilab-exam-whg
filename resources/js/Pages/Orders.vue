@@ -9,7 +9,7 @@ export default {
 <template>
     <main-layout :breadcrumb="breadcrumb">
         <Head>
-            <title>Home</title>
+            <title>Orders</title>
         </Head>
     </main-layout>
 </template>

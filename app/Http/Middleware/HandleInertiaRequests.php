@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use Illuminate\Console\View\Components\Component;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 

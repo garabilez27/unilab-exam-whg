@@ -28,17 +28,5 @@ export default {
             }
         }
     },
-    methods: {
-        async login() {
-            // You would use Axios or another HTTP library to send a POST request to your backend for authentication.
-            // Example using Axios:
-            try {
-                const response = await axios.post('/login', this.form);
-                // Handle the response, maybe redirect on success.
-            } catch (error) {
-                // Handle authentication errors here.
-            }
-        }
-    }
 }
 </script>

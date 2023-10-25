@@ -1,15 +1,18 @@
 <script>
+
 export default {
     props: {
         breadcrumb: Array
     }
 }
+
 </script>
 
 <template>
+    <Head>
+        <title>Customers</title>
+    </Head>
     <main-layout :breadcrumb="breadcrumb">
-        <Head>
-            <title>Home</title>
-        </Head>
+        
     </main-layout>
 </template>
