@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('fullname');
             $table->string('mobileNumber');
             $table->string('city');
-            $table->date('dateCreated')->default(today());
+            $table->timestamp('dateCreated')->useCurrent();
             $table->integer('createdBy');
-            $table->timestamps();
+            $table->timestamp('updatedAt')->useCurrent()->useCurrentOnUpdate();
             $table->integer('userID');
             $table->smallInteger('active')->default(1);
         });

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('skuID');
             $table->integer('quantity');
             $table->double('price', 11, 2);
-            $table->timestamps();
+            $table->timestamp('updatedAt')->useCurrent()->useCurrentOnUpdate();
             $table->integer('userID');
         });
     }

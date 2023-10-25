@@ -7,9 +7,10 @@ export default {
 </script>
 
 <template>
+    <Head>
+        <title>Items</title>
+    </Head>
     <main-layout :breadcrumb="breadcrumb">
-        <Head>
-            <title>Items</title>
-        </Head>
+        
     </main-layout>
 </template>

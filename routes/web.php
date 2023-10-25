@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Customer;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use Inertia\Inertia;
@@ -26,11 +27,20 @@ Route::get("/", function () {
 });
 
 Route::get("customers", function () {
+    $customers = Customer::all()->map(fn($user) => [
+        'cid' => $user->id,
+        'fname' => $user->fullname,
+        'mobile' => $user->mobileNumber,
+        'city' => $user->city,
+        'active' => $user->active
+    ]);
+
     return Inertia::render("Customers", [
         'breadcrumb' => [
             'Home',
             'Customers'
-        ]
+        ],
+        'customers' => $customers
     ]);
 });
 

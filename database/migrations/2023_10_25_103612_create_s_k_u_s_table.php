@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('code');
             $table->double('unitPrice', 11,2);
-            $table->date('dateCreated')->default(today());
+            $table->timestamp('dateCreated')->useCurrent();
             $table->integer('createdBy');
-            $table->timestamps();
+            $table->timestamp('updatedAt')->useCurrent()->useCurrentOnUpdate();
             $table->integer('userID');
             $table->smallInteger('active')->default(1);
         });
