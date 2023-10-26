@@ -44,6 +44,19 @@ Route::get("customers", function () {
     ]);
 });
 
+Route::post("customer", function () {
+    $attr = Request::validate([
+        'fname' => 'required',
+        'lname' => 'required',
+        'mobile' => ['required', 'numeric'],
+        'city' => 'required',
+    ]);
+
+    Customer::create($attr);
+
+    //return redirect('customers');
+});
+
 Route::get("orders", function () {
     return Inertia::render("Orders", [
         'breadcrumb' => [

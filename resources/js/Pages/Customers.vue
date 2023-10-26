@@ -4,10 +4,7 @@
     </Head>
     <main-layout :breadcrumb="breadcrumb">
       <!-- Custom Modal -->
-      <CustomModal :show="modalOpen" @close="closeModal" title="Add Customer">
-        <!-- Content to display within the modal -->
-        <p>This is the modal content.</p>
-      </CustomModal>
+      <CustomModal :show="modalOpen" @close="closeModal" title="Add Customer" />
   
       <h1>Customers</h1>
       <div class="pt-2">
