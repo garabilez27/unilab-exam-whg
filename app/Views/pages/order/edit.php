@@ -88,7 +88,7 @@
                 <?php $num=0; ?>
                 <?php foreach($items as $item => $value): ?>
                   <tr>
-                    <td><input type='text' value='<?= $value['skuID']."|".$value['quantity']."|".$value['price'] ?>' name='items[]' class='item' hidden readonly></td>
+                    <td><input type='text' value='<?= $value['skuID']."|".$value['quantity']."|".$value['price'] ?>' name='items[]' class='item' hidden readonly><?= $value['skuDet']['name'] ?></td>
                     <td><?= $value['quantity'] ?></td>
                     <td><?= $value['price'] ?></td>
                     <td><a href='javascript:;' class='text-secondary font-weight-bold text-xs edit-btn' data-bs-toggle='modal' data-bs-target='#add-modal' data-id='<?= $num ?>' onclick='updateItem(this)'>Edit</a></td>

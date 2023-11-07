@@ -128,6 +128,9 @@ class OrderController extends BaseController
         $data['status'] = $statusModel->findAll();
         $data['customers'] = $customerModel->where('active', 1)->find($data['order']['customerID']);
         $data['items'] = $itemModel->where('poID', $data['order']['id'])->findAll();
+        foreach ($data['items'] as $key => $value) {
+            $data['items'][$key]['skuDet'] = $skuModel->find($value['skuID']);
+        }
         $data['root_page'] = ucfirst($this->root);
 
         return view('include/default/header', $data)
