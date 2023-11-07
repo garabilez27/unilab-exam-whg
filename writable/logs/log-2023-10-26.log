@@ -1,0 +1,18 @@
+CRITICAL - 2023-10-26 23:24:54 --> Invalid file: "pages/order/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages/order/index.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pages/order/index', [], true)
+ 3 APPPATH\Controllers\OrderController.php(27): view('pages/order/index')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\OrderController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrderController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-26 23:28:02 --> Invalid file: "pages/dashboard/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages/dashboard/index.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pages/dashboard/index', [], true)
+ 3 APPPATH\Controllers\SKUController.php(27): view('pages/dashboard/index')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\SKUController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SKUController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

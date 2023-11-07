@@ -1,11 +1,14 @@
-<?php
+<?php 
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use CodeIgniter\Model;
 
 class Customer extends Model
 {
-    use HasFactory;
+    protected $table = 'customers';
+    protected $primaryKey = 'id';
+    protected $allowedFields = ['firstname', 'lastname', 'fullname', 'mobileNumber', 'city', 'active', 'userID', 'createdBy'];
 }
+
+?>
